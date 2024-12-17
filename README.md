@@ -6,6 +6,7 @@
 
 #### Create database demo;
 Create a database first, then specify which database. Next, create a table.
+
 ![image](https://github.com/user-attachments/assets/34c1e8cb-b6a0-4aae-83cb-009b3d2d6a97)
 
 ![image](https://github.com/user-attachments/assets/e21cb20b-8051-4c09-98a0-c1622b04c843)
