@@ -9,6 +9,25 @@ show databases;
 ![image](https://github.com/user-attachments/assets/104ba31a-17c5-49ca-b27d-f5414e0641e5)
 #
 
+> Create a database.
+ 
+```bash 
+create database db1;
+```
+
+> Remove a database.
+ 
+```bash 
+drop database db1;
+```
+
+> Display the numbers of tables in the specified database.
+ 
+```bash 
+use db1;
+select database();
+```
+
 > Create a database first, then specify which database. Next, create a table.
 
 ```bash
