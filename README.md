@@ -22,4 +22,9 @@ create table person (name varchar(20), phone varchar(20), age int);
 ![image](https://github.com/user-attachments/assets/e21cb20b-8051-4c09-98a0-c1622b04c843)
 
 
-
+> Remove a table. Specify which database first.
+ 
+```bash 
+use demo;
+drop table person;
+```
