@@ -1,6 +1,6 @@
 # MySQL Note
 
-#### show databases; `#ffffff` 
+#### show databases; `#ffffff`  `#000000`
 ![image](https://github.com/user-attachments/assets/104ba31a-17c5-49ca-b27d-f5414e0641e5)
 
 
