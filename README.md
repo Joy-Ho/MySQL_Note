@@ -63,6 +63,7 @@ show tables;
 | employeeID  | birth_date | first_name | last_name | gender | hired_date |
 | ----------  | ---------- | ---------- | --------- | ------ | ---------- |
 | INT | DATE        | VARCHAR(20) | VARCHAR(20) | ENUM('M', 'F') | DATE |
+
 ![image](https://github.com/user-attachments/assets/0ae92b02-507a-408c-8bd7-d96ba42ca02a)
 ![image](https://github.com/user-attachments/assets/05802e84-6f84-40b5-8025-08fbf3b3d4bc)
 
