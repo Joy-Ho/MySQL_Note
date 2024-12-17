@@ -26,4 +26,8 @@ create table person (name varchar(20), phone varchar(20), age int);
 ```bash 
 use demo;
 drop table person;
+show tables;
 ```
+![image](https://github.com/user-attachments/assets/ad557174-bfbd-42cf-92b9-0a7e58e5b314)
+#
+
