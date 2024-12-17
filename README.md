@@ -59,7 +59,7 @@ show tables;
 ![image](https://github.com/user-attachments/assets/ad557174-bfbd-42cf-92b9-0a7e58e5b314)
 #
 
-## Practice: Create a table named employee in demo database
+### Practice: Create a table named employee in demo database
 | employeeID  | birth_date | first_name | last_name | gender | hired_date |
 | ----------  | ---------- | ---------- | --------- | ------ | ---------- |
 | INT | DATE        | VARCHAR(20) | VARCHAR(20) | ENUM('M', 'F') | DATE |
