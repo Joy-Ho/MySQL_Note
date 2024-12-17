@@ -14,12 +14,14 @@ show databases;
 ```bash 
 create database db1;
 ```
+#
 
 > Remove a database.
  
 ```bash 
 drop database db1;
 ```
+#
 
 > Display the numbers of tables in the specified database.
  
@@ -27,6 +29,7 @@ drop database db1;
 use db1;
 select database();
 ```
+#
 
 > Create a database first, then specify which database. Next, create a table.
 
@@ -35,6 +38,7 @@ Create database demo;
 use demo;
 create table person (name varchar(20), phone varchar(20), age int);
 ```
+#
 
 ![image](https://github.com/user-attachments/assets/34c1e8cb-b6a0-4aae-83cb-009b3d2d6a97)
 
