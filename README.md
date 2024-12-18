@@ -107,6 +107,21 @@ Result:
 
 #
 > Set default value
+```bash
+ create table Person_db2(name VARCHAR(20) DEFAULT "Unknown", phone VARCHAR(20), age INT);
+ desc Person_db2;
+```
+```bash
+Result:
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(20) | YES  |     | Unknown |       |
+| phone | varchar(20) | YES  |     | NULL    |       |
+| age   | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+```
 
-
+# 
+> Set primary key (unique)
 
