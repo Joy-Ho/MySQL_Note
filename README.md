@@ -69,6 +69,36 @@ show tables;
 
 #
 
+> Insert new record into **Person** table
+```bash
+INSERT INTO person(name, phone, age) values ("John", "24566", "25");
+```
+#
+> Select all data from  **Person** table
+```bash
+SELECT * FROM Person;
+```
+```bash
+Result:
++------+-------+------+
+| name | phone | age  |
++------+-------+------+
+| John | 24566 |   25 |
++------+-------+------+
+```
 
+#
+> Select **name** column from  **Person** table
+```bash
+SELECT name FROM Person;
+```
+```bash
+Result:
++------+
+| name |
++------+
+| John |
++------+
+```
 
 
