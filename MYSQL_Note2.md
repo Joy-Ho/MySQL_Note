@@ -87,7 +87,42 @@ Result:
 |  9 | Harley     | Gilbert   | Software Architect     |   8000 | 2000-07-17 | NULL  |
 +----+------------+-----------+------------------------+--------+------------+-------+
 ```
+#
+> Extract data that does not satisfy a condition where the salary is 8500.
+```bash 
+select * from employee where NOT salary=8500;
+```
+```bash
+Result:
++----+------------+-----------+------------------------+--------+------------+-------+
+| id | first_name | last_name | title                  | salary | hire_date  | notes |
++----+------------+-----------+------------------------+--------+------------+-------+
+|  1 | Robin      | Jackman   | Software Engineer      |   5500 | 2001-10-12 | NULL  |
+|  2 | Taylor     | Edward    | Software Architect     |   7200 | 2002-09-21 | NULL  |
+|  3 | Vivian     | Dickens   | Database Administrator |   6000 | 2012-08-29 | NULL  |
+|  4 | Harry      | Clifford  | Database Administrator |   6800 | 2015-12-10 | NULL  |
+|  5 | Eliza      | Clifford  | Software Engineer      |   4750 | 1998-10-19 | NULL  |
+|  6 | Nancy      | Newman    | Software Engineer      |   5100 | 2007-01-23 | NULL  |
+|  8 | Jack       | Chan      | Test Engineer          |   6500 | 2018-09-07 | NULL  |
+|  9 | Harley     | Gilbert   | Software Architect     |   8000 | 2000-07-17 | NULL  |
++----+------------+-----------+------------------------+--------+------------+-------+
+```
 
+#
+> Update data, the salary of Software Architect update to 20000, and update the notes
+```bash 
+update employee set salary=20000, notes="update" where title="Software Architect";
+```
+```bash
+Result:
+select * from employee where title="Software Architect";
++----+------------+-----------+--------------------+--------+------------+--------+
+| id | first_name | last_name | title              | salary | hire_date  | notes  |
++----+------------+-----------+--------------------+--------+------------+--------+
+|  2 | Taylor     | Edward    | Software Architect |  20000 | 2002-09-21 | update |
+|  9 | Harley     | Gilbert   | Software Architect |  20000 | 2000-07-17 | update |
++----+------------+-----------+--------------------+--------+------------+--------+
+```
 
 
 #
