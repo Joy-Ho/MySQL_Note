@@ -10,5 +10,11 @@
 * Select data from a table
 * Set default value
 * Set primary key
- 
+
+# MYSQL_Note2
+* Execute sql file
+* Select data from a table
+* Select data where satifies conditions
+* Update data
+* delete data
 
