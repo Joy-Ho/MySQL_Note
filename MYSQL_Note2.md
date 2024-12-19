@@ -1,5 +1,21 @@
 # MySQL Note_2
 
+> Execute sql file
+```bash 
+source C:/Users/admin/Documents/test.sql;
+```
+#
+
+
+
+
+
+
+
+
+
+
+
 > Display all databases.
  
 ```bash 
