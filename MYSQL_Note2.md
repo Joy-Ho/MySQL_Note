@@ -124,72 +124,144 @@ select * from employee where title="Software Architect";
 +----+------------+-----------+--------------------+--------+------------+--------+
 ```
 
-
 #
-#
-#
-#
-
-> Display all databases.
- 
+> Delete data where the salary is 7200.
 ```bash 
-show databases;
+delete from employee where salary=7200;
+```
+
+#
+> Concat strings, concat first_name and last_name
+```bash 
+select CONCAT(first_name, " ", last_name, " was hired on ", SUBSTRING(hire_date,1, 4)) as information from employee;
 ```
 ```bash
 Result:
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
++------------------------------------+
+| information                        |
++------------------------------------+
+| Robin Jackman was hired on 2001    |
+| Taylor Edward was hired on 2002    |
+| Vivian Dickens was hired on 2012   |
+| Harry Clifford was hired on 2015   |
+| Eliza Clifford was hired on 1998   |
+| Nancy Newman was hired on 2007     |
+| Melinda Clifford was hired on 2013 |
+| Jack Chan was hired on 2018        |
+| Harley Gilbert was hired on 2000   |
++------------------------------------+
 ```
-#
 
-> Create a database.
- 
+> Concat first name, last name and hired_date.
 ```bash 
-create database db1;
+select CONCAT(first_name, ",", last_name) as fullname from employee;
 ```
-#
-
-### Practice: Create a table named employee in demo database
-| employeeID  | birth_date | first_name | last_name | gender | hired_date |
-| ----------  | ---------- | ---------- | --------- | ------ | ---------- |
-| INT | DATE        | VARCHAR(20) | VARCHAR(20) | ENUM('M', 'F') | DATE |
-
-
-#
-
-```bash 
+```bash
 Result:
-
-desc employees;
-+------------+---------------+------+-----+------------+----------------+
-| Field      | Type          | Null | Key | Default    | Extra          |
-+------------+---------------+------+-----+------------+----------------+
-| employeeID | int           | NO   | PRI | NULL       | auto_increment |
-| birth_date | date          | NO   |     | NULL       |                |
-| first_name | varchar(20)   | NO   |     | NULL       |                |
-| last_name  | varchar(20)   | NO   |     | NULL       |                |
-| gender     | enum('M','F') | NO   |     | NULL       |                |
-| hired_date | date          | NO   |     | 2000-01-01 |                |
-+------------+---------------+------+-----+------------+----------------+
-
++------------------+
+| fullname         |
++------------------+
+| Robin,Jackman    |
+| Taylor,Edward    |
+| Vivian,Dickens   |
+| Harry,Clifford   |
+| Eliza,Clifford   |
+| Nancy,Newman     |
+| Melinda,Clifford |
+| Jack,Chan        |
+| Harley,Gilbert   |
++------------------+
+```
+#
+> Concat strings with delimeter using **CONCAT_WS**
+```bash
+select CONCAT_WS("-", first_name, last_name, title) from employee;
 ```
 
-
-```bash 
-
-
+```bash
+Result:
++----------------------------------------------+
+| CONCAT_WS("-", first_name, last_name, title) |
++----------------------------------------------+
+| Robin-Jackman-Software Engineer              |
+| Taylor-Edward-Software Architect             |
+| Vivian-Dickens-Database Administrator        |
+| Harry-Clifford-Database Administrator        |
+| Eliza-Clifford-Software Engineer             |
+| Nancy-Newman-Software Engineer               |
+| Melinda-Clifford-Project Manager             |
+| Jack-Chan-Test Engineer                      |
+| Harley-Gilbert-Software Architect            |
++----------------------------------------------+
 ```
 
-
-
-```bash 
-
-
+#
+> Extract characters from a string using **SUBSTRING**
+```bash
+select SUBSTRING(title, 1, 5) from employee;
 ```
+
+```bash
+Result:
++------------------------+
+| SUBSTRING(title, 1, 5) |
++------------------------+
+| Softw                  |
+| Softw                  |
+| Datab                  |
+| Datab                  |
+| Softw                  |
+| Softw                  |
+| Proje                  |
+| Test                   |
+| Softw                  |
++------------------------+
+```
+
+#
+> Replace software with hardware
+```bash
+select first_name, last_name, REPLACE(title, "Software", "Hardware") from employee;
+```
+
+```bash
+Result:
++------------+-----------+----------------------------------------+
+| first_name | last_name | REPLACE(title, "Software", "Hardware") |
++------------+-----------+----------------------------------------+
+| Robin      | Jackman   | Hardware Engineer                      |
+| Taylor     | Edward    | Hardware Architect                     |
+| Vivian     | Dickens   | Database Administrator                 |
+| Harry      | Clifford  | Database Administrator                 |
+| Eliza      | Clifford  | Hardware Engineer                      |
+| Nancy      | Newman    | Hardware Engineer                      |
+| Melinda    | Clifford  | Project Manager                        |
+| Jack       | Chan      | Test Engineer                          |
+| Harley     | Gilbert   | Hardware Architect                     |
++------------+-----------+----------------------------------------+
+```
+
+#
+> uppercase
+```bash
+select UPPER(first_name) as FirstName, UPPER(last_name) as LastName from employee;
+```
+
+```bash
+Result:
++-----------+----------+
+| FirstName | LastName |
++-----------+----------+
+| ROBIN     | JACKMAN  |
+| TAYLOR    | EDWARD   |
+| VIVIAN    | DICKENS  |
+| HARRY     | CLIFFORD |
+| ELIZA     | CLIFFORD |
+| NANCY     | NEWMAN   |
+| MELINDA   | CLIFFORD |
+| JACK      | CHAN     |
+| HARLEY    | GILBERT  |
++-----------+----------+
+```
+
 
