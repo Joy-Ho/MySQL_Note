@@ -123,5 +123,110 @@ Result:
 ```
 
 # 
-> Set primary key (unique)
+> Set primary key (unique). Set **phone** column as primary key
+```bash
+Way1:
+CREATE TABLE Person_db3(
+   name VARCHAR(20),
+   phone VARCHAR(20),
+   age INT,
+   PRIMARY KEY (phone));
 
+Way2:
+CREATE TABLE Person_db3(
+    name VARCHAR(20),
+    phone VARCHAR(20) PRIMARY KEY,
+    age INT);
+
+desc Person_db3;
+```
+
+```bash
+Result:
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(20) | YES  |     | NULL    |       |
+| phone | varchar(20) | NO   | PRI | NULL    |       |
+| age   | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+```
+
+
+# 
+> Set primary key of 2 columns. Set **name** and **phone** column as primary key
+```bash
+CREATE TABLE Person_db3(
+    name VARCHAR(20),
+    phone VARCHAR(20),
+    age INT,
+    PRIMARY KEY(name, phone));
+```
+```bash
+Result:
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(20) | NO   | PRI | NULL    |       |
+| phone | varchar(20) | NO   | PRI | NULL    |       |
+| age   | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+```
+
+### Practice: Create a table named employees in demo database
+| employeeID  | birth_date | first_name | last_name | gender | hired_date |
+| ----------  | ---------- | ---------- | --------- | ------ | ---------- |
+| INT  | DATE | VARCHAR(20) | VARCHAR(20) | ENUM('M', 'F') | DATE |
+
+
+```bash 
+Requirements:
+
+employeeID: Automatically increments, mandatory, primary key
+birth_date: Date, mandatory
+first_name: Text, mandatory
+last_name: Text, mandatory
+gender: mandatory
+hired_date: Date, mandatory, Default is "2000-01-01"
+```
+
+```bash 
+CREATE TABLE employees(
+    employeeID INT AUTO_INCREMENT,
+    birth_date DATE NOT NULL,
+    first_name VARCHAR(20) NOT NULL,
+    last_name VARCHAR(20) NOT NULL,
+    gender ENUM("M","F") NOT NULL,
+    hired_date DATE NOT NULL DEFAULT "2000-01-01",
+    PRIMARY KEY (employeeID));
+```
+
+```bash 
+Result:
+
+desc employees;
++------------+---------------+------+-----+------------+----------------+
+| Field      | Type          | Null | Key | Default    | Extra          |
++------------+---------------+------+-----+------------+----------------+
+| employeeID | int           | NO   | PRI | NULL       | auto_increment |
+| birth_date | date          | NO   |     | NULL       |                |
+| first_name | varchar(20)   | NO   |     | NULL       |                |
+| last_name  | varchar(20)   | NO   |     | NULL       |                |
+| gender     | enum('M','F') | NO   |     | NULL       |                |
+| hired_date | date          | NO   |     | 2000-01-01 |                |
++------------+---------------+------+-----+------------+----------------+
+
+```
+
+
+```bash 
+
+
+```
+
+
+
+```bash 
+
+
+```
