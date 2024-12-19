@@ -17,4 +17,5 @@
 * Select data where satifies conditions
 * Update data
 * delete data
+* String Operation, including CONCAT, SUBSTRING, REPLACE, UPPER.
 
