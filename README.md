@@ -18,4 +18,7 @@
 * Update data
 * delete data
 * String Operation, including CONCAT, SUBSTRING, REPLACE, UPPER.
+* sort the result using **ORDER BY**
+* Limit the number of records using **LIMIT**
+* Extract the data using **LIKE**, and combine with **%** , **_** ,  **\\**
 
