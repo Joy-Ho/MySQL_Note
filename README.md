@@ -36,5 +36,5 @@ Relationship
 * FOREIGN KEY
 * INNER JOIN
 * LEFT JOIN
-* Right JOIN,
+* Right JOIN
 
