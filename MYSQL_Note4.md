@@ -1,4 +1,4 @@
-# MySQL Note_3
+# MySQL Note_4
 Relationship
 
 > Two tables, **customers** and **orders**, **id**  and **customer_id** are the same columns
