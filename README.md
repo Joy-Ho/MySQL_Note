@@ -31,3 +31,10 @@ Logic Operator
 * IN/NOT IN
 * CASE
 
+# MYSQL_Note4
+Relationship
+* FOREIGN KEY
+* INNER JOIN
+* LEFT JOIN
+* Right JOIN,
+
