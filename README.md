@@ -22,3 +22,12 @@
 * Limit the number of records using **LIMIT**
 * Extract the data using **LIKE**, and combine with **%** , **_** ,  **\\**
 
+# MYSQL_Note3
+Logic Operator
+* Equal/NotEqual
+* LIKE/NOT LIKE
+* AND/OR
+* BETWEEN
+* IN/NOT IN
+* CASE
+
