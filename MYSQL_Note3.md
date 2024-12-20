@@ -1,4 +1,4 @@
-# MySQL Note_2
+# MySQL Note_3
 
 > **Equal**/**NotEqual**, select data where salary is 8000
 ```bash 
